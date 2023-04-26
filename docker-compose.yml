@@ -4,4 +4,4 @@ services:
     image: $IMAGE_NAME
     container_name: reactjs
     ports:
-      - "5000:80"
+      - "80:80"
