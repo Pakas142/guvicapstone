@@ -2,5 +2,4 @@ node_modules
 .gitignore
 build.sh
 deploy.sh
-docker-compose.yml
-docker-compose.template.yml
+
