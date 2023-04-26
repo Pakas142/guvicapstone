@@ -3,7 +3,7 @@ WORKDIR /usr/app
 COPY . /usr/app
 RUN npm install
 COPY . .
-CMD ["npm", "build;"]
+CMD npm run build
 
 
 
