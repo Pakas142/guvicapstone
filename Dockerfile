@@ -3,8 +3,8 @@ WORKDIR /usr/app
 COPY . /usr/app
 RUN npm install
 COPY . .
-CMD ["npm", "start;"]
-RUN npm run build
+CMD ["npm", "build;"]
+
 
 
 FROM nginx:1.21-alpine
