@@ -10,12 +10,13 @@ class App extends Component {
     super(props);
     this.state = {
       error: null,
+      host: window.location.href,
       users: [],
     };
   }
 
   componentDidMount() {
-    const url = "http://localhost:5000/users";
+    const url = `${this.state.host}/users`;
     fetch(url)
       .then((response) => response.json())
       .then((result) => {
