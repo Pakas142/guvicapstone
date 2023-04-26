@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = `${this.state.host}/users`;
+    const url = "https://jsonplaceholder.typicode.com/users";
     fetch(url)
       .then((response) => response.json())
       .then((result) => {
