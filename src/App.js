@@ -15,7 +15,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    const url = "http://172.31.23.250/users";
+    const url = "http://localhost/users";
     fetch(url)
       .then((response) => response.json())
       .then((result) => {
