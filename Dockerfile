@@ -10,6 +10,6 @@ CMD ["npm", "build;"]
 FROM nginx:1.21-alpine
 RUN rm /usr/share/nginx/html/index.html
 WORKDIR /usr/share/nginx/html/
-COPY --from=build /usr/app/build/ .
+COPY --from=build /usr/app/build/ ./
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
