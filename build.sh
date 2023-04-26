@@ -5,7 +5,6 @@ if [ "$GIT_BRANCH" = "origin/dev" ]; then
     docker login -u pakas142 -p Pakas@142
     docker tag $IMAGE_NAME pakas142/dev:latest
     docker push pakas142/dev:latest
-    echo "image succesfully pushed to dev repository"
 	sed 's|{{IMAGE_NAME}}|${IMAGE_NAME}|' docker-compose.template.yml > docker-compose.yml
     docker ps
 elif [ "$GIT_BRANCH" = "origin/master" ]; then
@@ -15,7 +14,6 @@ elif [ "$GIT_BRANCH" = "origin/master" ]; then
     docker login -u pakas142 -p Pakas@142
     docker tag $IMAGE_NAME pakas142/prod:latest
     docker push pakas142/prod:latest
-    echo "image successfully pushed to prod repository"
 	sed 's|{{IMAGE_NAME}}|${IMAGE_NAME}|' docker-compose.template.yml > docker-compose.yml
     docker ps
 else echo "either git pull not available in dev or master"
